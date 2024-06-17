@@ -2,7 +2,7 @@ name: Reactapp Workflow
 on:
   push:
     branches:
-      - feature1
+      - main
 
 jobs:
   unit-testing:
