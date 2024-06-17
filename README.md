@@ -192,11 +192,16 @@ Finally, we commit the workflow changes and the workflow executes automatically
 
 We then check the cluster to view the resources deployed
 
+![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/06b8673c-3447-4502-b587-a314c5773a64)
+
 ![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/90a11cb8-0e9d-4cc7-856e-1231e2f0e379)
 
 Next, we access the application using the Load Balancer DNS name as shown in the Kubernetes service
 
-![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/8b018077-ec56-42b4-b8fd-23bf627dae7b)
+![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/1a3e7a14-f542-4a79-968d-d3143b30727e)
+
+Congratulations!!!
+
 
 
 
