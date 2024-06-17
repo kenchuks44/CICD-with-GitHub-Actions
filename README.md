@@ -63,6 +63,10 @@ Firstly, we check out of the repository. Next, we make use of github marketpalce
 ## Job 2: Containerization
 Here, we go through the process of dockerizing our application. With GitHub marketplace actions, we authenticate to dockerhub registry, build docker image using the docker file created, test the image and then push the image to DockerHub Registry and GitHub Container Registry. Additionally, to successfully carry out this task, we define some variables and secrets in our repository and then reference them properly.
 
+![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/1021c116-b6b2-4dcf-bf2c-64a14ce65fe3)
+
+![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/e90f3492-a5bc-46c3-9b8b-2c1f55fa7118)
+
 ```
 docker:
     name: Containerization
@@ -115,8 +119,12 @@ docker:
             ghcr.io/${{ github.repository_owner }}/reactapp:${{ github.sha }}
 ```
 
+![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/fb10ff55-baec-412d-adec-86a56d6190db)
+
+![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/6df435bf-1305-476c-9dbe-c8cfe40fa812)
+
 ## Job 3: Dev-Deploy
-Here, before proceeding to define the dev-deploy job, we first of all setup a cluster where we will deploy our application. Next, we define the job. In this job, we configure AWS credentials, install kubectl, AWS CLI, update kubeconfig for EKS and deploy the application to the cluster.
+Here, before proceeding to define the dev-deploy job, we first of all setup a cluster where we will deploy our application. Next, we define the job. In this job, we configure AWS credentials, AWS CLI, update kubeconfig for EKS and deploy the application to the cluster.
 
 ```
 dev-deploy:
@@ -171,4 +179,28 @@ dev-deploy:
         run: |
           kubectl apply -f kubernetes/development
 ```
+
+Finally, we commit the workflow changes and the workflow executes automatically
+
+![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/810a7b4c-f5ae-43e8-a48f-fa6cd52a3b14)
+
+![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/670c9ca8-92d2-437d-b392-0b15888e97d5)
+
+![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/60e7ed51-6fdf-40ff-b51b-098cbc619a14)
+
+![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/fa958a52-1216-44d3-875f-a09410f4123a)
+
+We then check the cluster to view the resources deployed
+
+![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/90a11cb8-0e9d-4cc7-856e-1231e2f0e379)
+
+Next, we access the application using the Load Balancer DNS name as shown in the Kubernetes service
+
+![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/8b018077-ec56-42b4-b8fd-23bf627dae7b)
+
+
+
+
+
+
 
