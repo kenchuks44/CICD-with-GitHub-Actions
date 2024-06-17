@@ -13,6 +13,10 @@ Steps refer to individual tasks that makes up a job. They define what actions Gi
 
 In this project, we demonstrate the automation of software delivery process of an application to a kubernetes cluster using GitHub Actions
 
+## Architecture
+
+![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/5d12e652-67b1-4939-9473-12912d002a7b)
+
 ## Creating the Workflow
 ## Step 1: Define trigger condition
 Here, we define the condition to trigger our workflow and the branch where the trigger is set. Here, the workflow will be triggered for every push to the main branch.
