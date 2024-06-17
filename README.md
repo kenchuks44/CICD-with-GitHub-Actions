@@ -121,7 +121,7 @@ docker:
 
 ![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/fb10ff55-baec-412d-adec-86a56d6190db)
 
-![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/6df435bf-1305-476c-9dbe-c8cfe40fa812)
+![image](https://github.com/kenchuks44/CICD-with-GitHub-Actions/assets/88329191/3eca0298-575c-4699-9adb-02c2da0ab18d)
 
 ## Job 3: Dev-Deploy
 Here, before proceeding to define the dev-deploy job, we first of all setup a cluster where we will deploy our application. Next, we define the job. In this job, we configure AWS credentials, AWS CLI, update kubeconfig for EKS and deploy the application to the cluster.
